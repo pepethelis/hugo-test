@@ -29,12 +29,11 @@ outputs:
     - JSON # necessary for search
 
 params:
-  author: "Your Name"
-  ShowShareButtons: true
+  author: pepethelis
   ShowReadingTime: true
   ShowBreadCrumbs: true
   ShowPostNavLinks: true
-  # comments: true # https://giscus.app/uk
+  comments: true # https://giscus.app/uk
   homeInfoParams:
     Title: Some reviews
     Content: Can be Info, links, about...
