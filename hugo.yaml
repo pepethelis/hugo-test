@@ -1,0 +1,45 @@
+baseURL: 'https://example.org/'
+locale: 'en-us'
+title: 'Reviews Hugo Test'
+theme: "PaperMod"
+
+menu:
+  main:
+    - identifier: categories
+      name: categories
+      url: /categories/
+      weight: 10
+    - identifier: tags
+      name: tags
+      url: /tags/
+      weight: 20
+    - identifier: search
+      name: search
+      url: /search/
+      weight: 30
+    - identifier: channel
+      name: channel
+      url: https://t.me/kallection
+      weight: 40
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+params:
+  author: "Your Name"
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  # comments: true # https://giscus.app/uk
+  homeInfoParams:
+    Title: Some reviews
+    Content: Can be Info, links, about...
+    socialIcons: # optional
+    - name: "telegram"
+      url: "https://t.me/kallection"
+    # - name: "<platform 2>"
+    #   url: "<link2>"
