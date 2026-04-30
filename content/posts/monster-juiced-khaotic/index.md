@@ -3,10 +3,7 @@ title: Monster juiced khaotic
 date: 2026-04-30 15:30:00 +0300
 categories: [власні огляди]
 tags: [review, monster/juiced]
-cover:
-  image: IMG_1021.jpg
-  alt: "A sample cover image"
-  caption: "This is a caption for the cover image."
+image: IMG_1021.jpg
 ---
 
 **Monster juiced khaotic**. Офіційний смак - "Orange Citrus", згідно з офіційним сайтом  

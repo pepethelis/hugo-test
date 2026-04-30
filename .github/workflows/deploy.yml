@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - master
   workflow_dispatch:
 permissions:
   contents: read
@@ -18,10 +19,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      DART_SASS_VERSION: 1.99.0
-      GO_VERSION: 1.26.1
-      HUGO_VERSION: 0.160.0
-      NODE_VERSION: 24.14.1
+      DART_SASS_VERSION: 1.97.1
+      GO_VERSION: 1.25.5
+      HUGO_VERSION: 0.154.2
+      NODE_VERSION: 24.12.0
       TZ: Europe/Oslo
     steps:
       - name: Checkout
@@ -50,13 +51,11 @@ jobs:
           tar -C "${HOME}/.local" -xf "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
           rm "dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz"
           echo "${HOME}/.local/dart-sass" >> "${GITHUB_PATH}"
-      - name: Install Hugo
-        run: |
-          curl -sLJO "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-          mkdir "${HOME}/.local/hugo"
-          tar -C "${HOME}/.local/hugo" -xf "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-          rm "hugo_extended_${HUGO_VERSION}_linux-amd64.tar.gz"
-          echo "${HOME}/.local/hugo" >> "${GITHUB_PATH}"
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: 'latest'
+          extended: true
       - name: Verify installations
         run: |
           echo "Dart Sass: $(sass --version)"
@@ -79,7 +78,7 @@ jobs:
             hugo-
       - name: Build the site
         run: |
-          hugo build \
+          hugo \
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/" \

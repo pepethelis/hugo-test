@@ -4,10 +4,7 @@ date: 2026-04-30T01:30:00+03:00
 categories: [огляди від підписників]
 tags: [review, monster/ultra]
 author: skrull
-cover:
-  image: photo_2026-04-17_09-24-50.jpg
-  alt: "A sample cover image"
-  caption: "This is a caption for the cover image."
+image: photo_2026-04-17_09-24-50.jpg
 ---
 
 **M∅NSTER ENERGY ULTRA PEACHY KEEN** 

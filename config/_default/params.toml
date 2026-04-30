@@ -1,0 +1,75 @@
+# Pages placed under these sections will be shown on homepage and archive page.
+mainSections = ["posts"]
+# Output page's full content in RSS.
+rssFullContent = true
+favicon        = "img/favicon-32x32.png"
+
+# Accepted values: "default", "lastmod"
+# default = see https://gohugo.io/quick-reference/glossary/#default-sort-order
+# lastmod = sort by last modified date, in descending order
+SortBy              = "default"
+
+[footer]
+    since      = 2026
+    customText = ""
+
+[dateFormat]
+    published   = ":date_full"
+    lastUpdated = ":date_full"
+
+[sidebar]
+    emoji    = "🍥"
+    subtitle = "Ваші енергоси вже оглянуті"
+    avatar   = "img/web-app-manifest-192x192.png"
+
+[article]
+    headingAnchor = true
+    math          = false
+    readingTime   = true
+
+    [article.license]
+        enabled = true
+        default = "Licensed under CC BY-NC-SA 4.0"
+
+[widgets]
+    homepage = [
+        { type = "search" },
+        { type = "categories", params = { limit = 10 } },
+        { type = "tag-cloud", params = { limit = 20 } },
+        { type = "archives", params = { limit = 10 } },
+    ]
+    page = [{ type = "toc" }]
+
+[opengraph.twitter]
+    site = ""
+    card = "summary_large_image"
+
+[colorScheme]
+    toggle  = true
+    default = "auto"
+
+## Comments
+[comments]
+    enabled  = true
+    provider = "giscus"
+
+    # See all the available configurations at https://github.com/CaiJimmy/hugo-theme-stack/blob/master/config/_default/params.toml
+    # Copy the configurations you need from there and paste it here.
+
+    [comments.giscus]
+      repo             = "pepethelis/hugo-test"
+      repoID           = "R_kgDOSRDxkA"
+      category         = "General"
+      categoryID       = "DIC_kwDOSRDxkM4C8ERa"
+      mapping          = "pathname"
+      lightTheme       = "light"
+      darkTheme        = "dark_dimmed"
+      reactionsEnabled = 1
+      emitMetadata     = 0
+      inputPosition    = "bottom"
+      lang             = "uk"
+      strict           = 0
+      loading          = "lazy"
+
+[imageProcessing]
+    autoOrient = true

@@ -9,5 +9,8 @@ hugo.exe
 hugo.darwin
 hugo.linux
 
+.DS_Store
+assets/jsconfig.json
+
 # Temporary lock file while building
 /.hugo_build.lock

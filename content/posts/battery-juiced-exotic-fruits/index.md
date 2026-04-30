@@ -3,10 +3,7 @@ title: Battery juiced exotic fruits
 date: 2026-04-30 01:00:00 +0300
 categories: [власні огляди]
 tags: [review, battery/juiced]
-cover:
-  image: IMG_0740.jpeg
-  alt: "A sample cover image"
-  caption: "This is a caption for the cover image."
+image: IMG_0740.jpeg
 ---
 
 **Battery juiced exotic fruits**. Офіційний смак - екзотичні фрукти, а сама манго, маракуйя та апельсин  
