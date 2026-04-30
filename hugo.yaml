@@ -1,6 +1,6 @@
-baseURL: 'https://example.org/'
-locale: 'en-us'
-title: 'Reviews Hugo Test'
+baseURL: "https://example.org/"
+locale: "en-us"
+title: "Reviews Hugo Test"
 theme: "PaperMod"
 
 menu:
@@ -39,7 +39,11 @@ params:
     Title: Some reviews
     Content: Can be Info, links, about...
     socialIcons: # optional
-    - name: "telegram"
-      url: "https://t.me/kallection"
+      - name: "telegram"
+        url: "https://t.me/kallection"
     # - name: "<platform 2>"
     #   url: "<link2>"
+
+caches:
+  images:
+    dir: :cacheDir/images
